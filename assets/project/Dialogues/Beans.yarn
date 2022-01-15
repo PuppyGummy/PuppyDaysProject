@@ -1,0 +1,44 @@
+title: Beans_meet
+tags: 
+colorID: 0
+position: 105,-430
+---
+<< if visited("Beans_meet") is false >> 
+<<Act Toto Toto_neutral left bottom>>
+<<Act Beans Beans_neutral right bottom>>
+    Toto:阿豆！你有见到过我的主人吗？ #line:08d1e7e
+    Beans:没有啊 #line:071ec1c
+    Beans:你的主人也不见了？ #line:09e1285
+    Toto:你也是吗？ #line:0db5f5b
+<<Act Beans Beans_concerned>>
+    Beans:对…我现在在门口等着他回来 #line:0eefa4b
+<<Act Toto Toto_concerned>>
+    Toto:这就感觉很奇怪了… #line:000836f
+<<Act Toto Toto_neutral>>
+    Toto:我再去问问别的狗狗吧 #line:00abee6
+<<Act Beans Beans_neutral>>
+    Beans:好，如果有消息记得告诉我 #line:0ec4096
+    Toto:好的，待会见！ #line:0c00483
+<< elseif visited("Beans_meet") is true >> 
+Beans:你有什么消息吗？ #line:04efe0d
+-> 是 #line:0255f0c
+    <<jump Beans_yes>>
+-> 否 #line:0a259df
+    <<jump Beans_no>>
+<< endif >>
+===
+title: Beans_yes
+tags: 
+colorID: 0
+position: 415,-324
+---
+Toto:是的，我打听到了一些消息！ #line:0b248cf
+===
+title: Beans_no
+tags: 
+colorID: 0
+position: 398,-580
+---
+<< SetPlayerSprite concerned >> 
+Toto:不…还没有 #line:0cc07d6
+===

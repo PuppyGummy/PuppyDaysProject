@@ -1,0 +1,10 @@
+title: Toys
+tags: 
+colorID: 0
+position: 481,-85
+---
+<<Act Toto Toto_neutral left bottom>>
+Toto:我最爱的玩具！ #line:03e6e38
+<<Act Toto Toto_sad>>
+Toto:但是没有人可以陪我玩了… #line:06a1db0
+===

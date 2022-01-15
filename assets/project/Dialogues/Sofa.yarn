@@ -1,0 +1,12 @@
+title: Sofa
+tags: 
+colorID: 0
+position: 416,-188
+---
+<<Act Toto Toto_neutral left bottom>>
+Toto:我晚上在这里睡觉 #line:0caf57f
+Toto:<i>*嗅嗅*</i> #line:0ac9fa7
+Toto:还留着主人的味道 #line:0dd489a
+<<Act Toto Toto_sad>>
+Toto:不知道她去哪了… #line:09a9be8
+===
