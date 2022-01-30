@@ -23,7 +23,6 @@ public class PlayerController2D : MonoBehaviour
     private string currentAnimation;
 
     [Header("Character")]
-    //[SerializeField] Animator animator = null;
     [SerializeField] Transform puppet = null;
 
     [Header("Movement")]
@@ -50,10 +49,6 @@ public class PlayerController2D : MonoBehaviour
     public bool isJumping;
     public bool isFalling;
 
-    //private int animatorGroundedBool;
-    //private int animatorRunningSpeed;
-    //private int animatorJumpingSpeed;
-
     private bool grounded;
     private float speed;
 
@@ -79,10 +74,6 @@ public class PlayerController2D : MonoBehaviour
         softGroundMask = LayerMask.GetMask("Ground Soft");
         hardGroundMask = LayerMask.GetMask("Ground Hard");
 
-        //animatorGroundedBool = Animator.StringToHash("grounded");
-        //animatorRunningSpeed = Animator.StringToHash("speed");
-        //animatorJumpingSpeed = Animator.StringToHash("ySpeed");
-
         dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
@@ -95,7 +86,6 @@ public class PlayerController2D : MonoBehaviour
             {
                 SetAnimation(idle, true, 1f);
                 ticker = 0;
-                // Debug.Log("Dialogue Running Now");
                 return;
             }
         }
@@ -132,10 +122,6 @@ public class PlayerController2D : MonoBehaviour
             groundType = GroundType.Hard;
         else
             groundType = GroundType.None;
-
-        //Update animator
-        //animator.SetBool(animatorGroundedBool, groundType != GroundType.None);
-        //animator.SetFloat(animatorJumpingSpeed, controllerRigidbody.velocity.y);
 
         grounded = groundType != GroundType.None;
     }

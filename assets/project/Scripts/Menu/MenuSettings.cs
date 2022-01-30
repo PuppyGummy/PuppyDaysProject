@@ -6,22 +6,28 @@ using UnityEngine.UI;
 using TMPro;
 using Yarn.Unity;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 //TODO: 实现save＆quit
-//TODO: 添加切换语言选项
 
 public class MenuSettings : MonoBehaviour
 {
     public AudioMixer audioMixer;
+    public LineView lineView;
     public TMP_Text resolutionOption;
     public TMP_Text fullscreenOption;
+    public TMP_Text languageOption;
     public MenuSetting resolutionSetting;
     public MenuSetting fullscreenSetting;
+    public MenuSetting languageSetting;
+    public MenuSetting speedSetting;
     public MenuSetting sfxSetting;
     public MenuSetting bgmSetting;
 
     public Slider musicSlider;
     public Slider SFXSlider;
+    public Slider speedSlider;
     public TextLineProvider provider;
     public MenuSetting firstSelected;
 
@@ -34,8 +40,7 @@ public class MenuSettings : MonoBehaviour
     private int defaultResolution;
 
     private bool isFullscreen;
-
-    private string yes, no;
+    private bool isEnglish;
 
     // Start is called before the first frame update
     private void Start()
@@ -45,25 +50,23 @@ public class MenuSettings : MonoBehaviour
 
         // firstSelected.SetHighlight();
 
-        if (provider.textLanguageCode == "en")
-        {
-            yes = "yes";
-            no = "no";
-        }
-        else if (provider.textLanguageCode == "zh-Hans")
-        {
-            yes = "是";
-            no = "否";
-        }
-
         isFullscreen = Screen.fullScreen;
         if (Screen.fullScreen)
         {
-            fullscreenOption.text = yes;
+            fullscreenOption.text = LocalizationSettings.StringDatabase.GetLocalizedString("UI text", "Key_Yes");
         }
         else
         {
-            fullscreenOption.text = no;
+            fullscreenOption.text = LocalizationSettings.StringDatabase.GetLocalizedString("UI text", "Key_No");
+        }
+
+        if(LocalizationSettings.SelectedLocale.Equals(LocalizationSettings.AvailableLocales.GetLocale("en")))
+        {
+            languageOption.text = "English";
+        }
+        else if (LocalizationSettings.SelectedLocale.Equals(LocalizationSettings.AvailableLocales.GetLocale("zh-Hans")))
+        {
+            languageOption.text = "简体中文";
         }
 
         resolutions = Screen.resolutions;
@@ -102,6 +105,17 @@ public class MenuSettings : MonoBehaviour
                 SetFullscreen();
             }
         }
+        else if (EventSystem.current.currentSelectedGameObject == languageSetting.gameObject)
+        {
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            {
+                SetLanguage();
+            }
+        }
+        else if (EventSystem.current.currentSelectedGameObject == speedSlider.gameObject)
+        {
+            speedSetting.SetHighlight();
+        }
         else if (EventSystem.current.currentSelectedGameObject == SFXSlider.gameObject)
         {
             sfxSetting.SetHighlight();
@@ -109,6 +123,11 @@ public class MenuSettings : MonoBehaviour
         else if (EventSystem.current.currentSelectedGameObject == musicSlider.gameObject)
         {
             bgmSetting.SetHighlight();
+        }
+
+        if (EventSystem.current.currentSelectedGameObject != speedSlider.gameObject)
+        {
+            speedSetting.SetNormal();
         }
         if (EventSystem.current.currentSelectedGameObject != SFXSlider.gameObject)
         {
@@ -118,6 +137,7 @@ public class MenuSettings : MonoBehaviour
         {
             bgmSetting.SetNormal();
         }
+        
     }
 
     public void SetMusicVolume(float volume)
@@ -125,9 +145,14 @@ public class MenuSettings : MonoBehaviour
         musicSlider.value = volume;
     }
 
-    public void SetSFXolume(float volume)
+    public void SetSFXVolume(float volume)
     {
         SFXSlider.value = volume;
+    }
+
+    public void SetTextSpeed(float speed)
+    {
+        speedSlider.value = speed;
     }
 
     public void SetFullscreen()
@@ -137,11 +162,30 @@ public class MenuSettings : MonoBehaviour
 
         if (isFullscreen)
         {
-            fullscreenOption.text = yes;
+            fullscreenOption.text = LocalizationSettings.StringDatabase.GetLocalizedString("UI text", "Key_Yes");
         }
         else
         {
-            fullscreenOption.text = no;
+            fullscreenOption.text = LocalizationSettings.StringDatabase.GetLocalizedString("UI text", "Key_No");
+        }
+    }
+
+    public void SetLanguage()
+    {
+        UIAudio.Instance.PlayChangeSettings();
+        isEnglish = !isEnglish;
+
+        if (isEnglish)
+        {
+            languageOption.text = "English";
+            provider.textLanguageCode = "en";
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale("en");
+        }
+        else
+        {
+            languageOption.text = "简体中文";
+            provider.textLanguageCode = "zh-Hans";
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale("zh-Hans");
         }
     }
 
@@ -162,13 +206,19 @@ public class MenuSettings : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
         resolutionOption.text = resolutions[defaultResolution].width + " x " + resolutions[defaultResolution].height;
 
+        languageOption.text = "English";
+        provider.textLanguageCode = "en";
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale("en");
+
         Screen.fullScreen = true;
-        fullscreenOption.text = yes;
+        fullscreenOption.text = LocalizationSettings.StringDatabase.GetLocalizedString("UI text", "Key_Yes");
 
         audioMixer.SetFloat("musicVolume", 0);
         musicSlider.value = 0;
         audioMixer.SetFloat("SFXVolume", 0);
         SFXSlider.value = 0;
+        lineView.typewriterEffectSpeed = 20;
+        speedSlider.value = 20;
 
         UIAudio.Instance.PlayHitButton();
     }
@@ -178,6 +228,9 @@ public class MenuSettings : MonoBehaviour
         audioMixer.SetFloat("musicVolume", musicSlider.value);
         audioMixer.SetFloat("SFXVolume", SFXSlider.value);
 
+        //set text speed
+        lineView.typewriterEffectSpeed = speedSlider.value;
+
         //set resolution
         Resolution resolution = resolutions[currentOption];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
@@ -185,7 +238,7 @@ public class MenuSettings : MonoBehaviour
         //set fullscreen
         //NOTICE: changing the order of the line above and the line below will
         //disable the function of fullscreen
-        //cuz when setting the resolution will also set the fullscreen mode
+        //cuz setting the resolution will also set the fullscreen mode
         Screen.fullScreen = isFullscreen;
 
         UIAudio.Instance.PlayHitButton();

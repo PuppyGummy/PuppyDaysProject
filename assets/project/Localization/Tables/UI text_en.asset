@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI text_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 264739f6a67454b95bc2ed3ea301905f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 5984507387904
+    m_Localized: '- Settings -'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6066610888704
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6340146618368
+    m_Localized: Fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6409461686272
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6462687404032
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40064531816448
+    m_Localized: SFX Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40222002765824
+    m_Localized: BGM Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40312431960064
+    m_Localized: Apply Changes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40444292489216
+    m_Localized: Reset to Default
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40513355898880
+    m_Localized: Save and Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40580200521728
+    m_Localized: Back to Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40715928199168
+    m_Localized: Languages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41105897807872
+    m_Localized: Text Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41285493710848
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41320553897984
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41499168333824
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41583855525888
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41648246480896
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

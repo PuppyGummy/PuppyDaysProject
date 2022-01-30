@@ -17,4 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/StreetRight.unity
     guid: 92975ae50af444e9987f05e1fb1f46ba
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 0edc97f5e27f54c42be142e28b31f8ac,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 43497a9ad6a4041dc968ecc63971331f,
+      type: 2}

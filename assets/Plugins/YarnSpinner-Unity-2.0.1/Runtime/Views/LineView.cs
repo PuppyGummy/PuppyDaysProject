@@ -175,7 +175,7 @@ namespace Yarn.Unity
 
         [SerializeField]
         [Min(0)]
-        internal float typewriterEffectSpeed = 0f;
+        public float typewriterEffectSpeed = 0f;
 
         [SerializeField]
         internal GameObject continueButton = null;
