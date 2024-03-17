@@ -1,0 +1,16 @@
+title: TheBeginning
+---
+<<Act Toto Toto_neutral left bottom>>
+<<Act Beans Beans_neutral right bottom>>
+Toto: Hey Beans, have you seen my parent?
+Beans: Nope, is she travelling without you?
+<<Act Toto Toto_sad>>
+-> Oh my dog, it can't be true.
+-> No, she'd never leave me behind!
+Beans: Don't worry, I'm sure she will be back soon.
+<<Act Toto Toto_neutral left bottom>>
+Toto: Where's your dad?
+Beans: He's on a work trip, I suppose. I'm waiting for him here.
+Toto: Okay, I guess I'll have to take a look around.
+Beans: See you later! And let me know if you see my dad!
+===

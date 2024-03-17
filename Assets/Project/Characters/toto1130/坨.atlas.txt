@@ -1,0 +1,139 @@
+
+坨.png
+size: 251,961
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+LBackLeg
+  rotate: false
+  xy: 185, 649
+  size: 62, 118
+  orig: 68, 120
+  offset: 3, 1
+  index: -1
+LFrontLeg
+  rotate: true
+  xy: 2, 198
+  size: 78, 134
+  orig: 80, 134
+  offset: 1, 0
+  index: -1
+Lear
+  rotate: false
+  xy: 175, 297
+  size: 72, 80
+  orig: 72, 80
+  offset: 0, 0
+  index: -1
+RBackLeg
+  rotate: true
+  xy: 2, 278
+  size: 82, 153
+  orig: 84, 161
+  offset: 1, 1
+  index: -1
+RFronLeg
+  rotate: true
+  xy: 2, 9
+  size: 69, 130
+  orig: 72, 132
+  offset: 2, 1
+  index: -1
+Rear
+  rotate: false
+  xy: 175, 379
+  size: 74, 77
+  orig: 77, 83
+  offset: 3, 3
+  index: -1
+body
+  rotate: true
+  xy: 2, 513
+  size: 263, 181
+  orig: 265, 198
+  offset: 1, 17
+  index: -1
+bottom
+  rotate: false
+  xy: 185, 594
+  size: 58, 53
+  orig: 62, 55
+  offset: 2, 1
+  index: -1
+bu1
+  rotate: true
+  xy: 203, 769
+  size: 52, 32
+  orig: 52, 32
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 185, 458
+  size: 134, 57
+  orig: 134, 91
+  offset: 0, 34
+  index: -1
+face2
+  rotate: false
+  xy: 2, 139
+  size: 134, 57
+  orig: 134, 91
+  offset: 0, 34
+  index: -1
+face3
+  rotate: true
+  xy: 203, 880
+  size: 79, 42
+  orig: 134, 91
+  offset: 53, 0
+  index: -1
+face4
+  rotate: false
+  xy: 2, 80
+  size: 134, 57
+  orig: 134, 91
+  offset: 0, 34
+  index: -1
+head
+  rotate: false
+  xy: 2, 778
+  size: 199, 181
+  orig: 199, 183
+  offset: 0, 1
+  index: -1
+main
+  rotate: false
+  xy: 2, 362
+  size: 171, 149
+  orig: 173, 164
+  offset: 1, 1
+  index: -1
+tailBottom
+  rotate: false
+  xy: 138, 2
+  size: 97, 88
+  orig: 107, 88
+  offset: 1, 0
+  index: -1
+tailMiddle
+  rotate: false
+  xy: 138, 92
+  size: 108, 102
+  orig: 110, 102
+  offset: 0, 0
+  index: -1
+tailUp
+  rotate: false
+  xy: 157, 196
+  size: 88, 99
+  orig: 88, 101
+  offset: 0, 1
+  index: -1
+up
+  rotate: true
+  xy: 203, 823
+  size: 55, 39
+  orig: 59, 43
+  offset: 2, 2
+  index: -1

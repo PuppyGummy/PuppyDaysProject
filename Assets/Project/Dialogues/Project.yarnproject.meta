@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: a8b4fec203e9d4fb4b9102010f8d045c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 053561912b1654d80a424bb0696a74ae, type: 3}
+  sourceScripts:
+  - {fileID: 6391573757903218779, guid: 7c3a7bd76a5914b228b461bdcc3cf8ed, type: 3}
+  - {fileID: 6391573757903218779, guid: 007432c0f33424757ab02de9d886efa6, type: 3}
+  - {fileID: 6391573757903218779, guid: 378a7dab453f84e7bba0ae758a520a50, type: 3}
+  - {fileID: 6391573757903218779, guid: 44a6b3cb47fb0451b8e062f25d7b753f, type: 3}
+  - {fileID: 6391573757903218779, guid: 996685e2de7784c87b297e65d1f23168, type: 3}
+  - {fileID: 6391573757903218779, guid: f7da5c2d015a142438892adbc1096469, type: 3}
+  compileErrors: []
+  serializedDeclarations: []
+  defaultLanguage: zh-Hans
+  languagesToSourceAssets:
+  - languageID: en
+    stringsFile: {fileID: 4900000, guid: 3f15a68b37cde49dfba2a8ed280ea95f, type: 3}
+    assetsFolder: {fileID: 102900000, guid: 59a5a520b159f4a8fbbff8a4eee8e379, type: 3}
+  useAddressableAssets: 0

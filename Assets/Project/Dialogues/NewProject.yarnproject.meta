@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: a6355aaa9181a480588fc3a9beafabf2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 053561912b1654d80a424bb0696a74ae, type: 3}
+  sourceScripts:
+  - {fileID: 6391573757903218779, guid: 996685e2de7784c87b297e65d1f23168, type: 3}
+  - {fileID: 6391573757903218779, guid: f7da5c2d015a142438892adbc1096469, type: 3}
+  compileErrors:
+  - 'Error in Yarn Project Assets/Project/Dialogues/NewProject.yarnproject: 1:0:
+    Error: Unexpected "---" while reading a dialogue
+
+    ---
+
+    ^^^
+
+'
+  serializedDeclarations: []
+  defaultLanguage: en-US
+  languagesToSourceAssets: []
+  useAddressableAssets: 0
