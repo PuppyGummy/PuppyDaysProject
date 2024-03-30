@@ -60,7 +60,7 @@ public class CharacterFollow : MonoBehaviour
     }
     void LateUpdate()
     {
-        transform.localEulerAngles = new Vector3(45, 0, 0);
+        // transform.localEulerAngles = new Vector3(45, 0, 0);
     }
 
     private void Follow()
