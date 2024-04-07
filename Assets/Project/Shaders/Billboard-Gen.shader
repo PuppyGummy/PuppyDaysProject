@@ -31,7 +31,7 @@ Shader "Custom/BillboardGen"
             }
         
         // Render State
-        Cull Back
+        Cull Off
         Blend SrcAlpha OneMinusSrcAlpha, One OneMinusSrcAlpha
         ZTest LEqual
         ZWrite Off
@@ -401,7 +401,7 @@ Shader "Custom/BillboardGen"
             }
         
         // Render State
-        Cull Back
+        Cull Off
         ZTest LEqual
         ZWrite On
         
@@ -754,7 +754,7 @@ Shader "Custom/BillboardGen"
             }
         
         // Render State
-        Cull Back
+        Cull Off
         ZTest LEqual
         ZWrite On
         ColorMask 0
@@ -1106,7 +1106,7 @@ Shader "Custom/BillboardGen"
             }
         
         // Render State
-        Cull Back
+        Cull Off
         Blend SrcAlpha OneMinusSrcAlpha, One OneMinusSrcAlpha
         ZTest LEqual
         ZWrite Off
@@ -1828,7 +1828,7 @@ Shader "Custom/BillboardGen"
             }
         
         // Render State
-        Cull Back
+        Cull Off
         
         // Debug
         // <None>
